@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Hearts 7
+  m_EditorClassIdentifier: 
+  CardSuit: 0
+  CardValue: 7
+  CardSprite: {fileID: 21300000, guid: 39c143ecc8074f84494520acd16afe94, type: 3}
+  CardSpriteHand: {fileID: 0}
+  SuitSprite: {fileID: 21300000, guid: 784efede45862304097004b04ed9bc8e, type: 3}

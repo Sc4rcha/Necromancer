@@ -1,0 +1,193 @@
+using System.Collections.Generic;
+using UnityEngine;
+using System.Linq;
+using static GameInfo;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
+public class ManagerGameplay : MonoBehaviour
+{
+    public static ManagerGameplay Instance;
+
+    public int MaxHandSize;
+
+    [Header("Project References")]
+    public SoCardList ReferenceLibrary;
+
+    [Header("Scene References")]
+    public CardMovement CardMovement;
+    [Space]
+    public PileLibrary Library;
+    public PileDiscard Discard;
+    public CardGroupHand GroupHand;
+    public CardGroup GroupAces;
+    [Space]
+    public BattlefieldSlot[] Battlefield;
+    public GameObject DiscardMessage;
+    [Space]
+    public CardVisuals CardVisuals;
+    public InfoRounds Rounds;
+    [Space]
+    public GameWinScreen GameWinScreen;
+    public GameObject GameLoseScreen;
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        Setup();
+        StartGame();
+    }
+
+    protected void Setup() 
+    {
+        // setup Piles
+        Library.Setup();
+        Discard.Setup();
+
+        // setup groups
+        GroupHand.Setup();
+        GroupAces.Setup();
+
+        // setup slots
+        foreach (BattlefieldSlot slot in Battlefield)
+            slot.Setup();
+
+        // setup card visuals
+        CardVisuals.Setup();
+    }
+    protected void StartGame() 
+    {
+        // initial draw
+        DrawInitial();
+
+        // initial Battlefield reveal
+        NewBattlefield();
+    }
+
+    private void DrawInitial() 
+    {
+        List<Card> initialHand = Library.Draw();
+
+        // order army list
+        initialHand = initialHand.OrderByDescending(x => x.Value).ToList();
+
+        // add army to player
+        foreach(Card card in initialHand)
+        {
+            GroupHand.CardAdd(card);
+            CardVisuals.MoveCardDraw(Library.transform as RectTransform, GroupHand);
+        }
+    }
+    public void RevealBattlefield() 
+    {
+        // check if there are still enemies in the battlefield
+        foreach (BattlefieldSlot slot in Battlefield)
+        {
+            if (!slot.IsEmpty && slot.IsEnemy) return;
+        }
+
+        // pickup all remaining spells
+        foreach (BattlefieldSlot slot in Battlefield)
+        {
+            if (!slot.IsEmpty && !slot.IsEnemy) slot.Spell.TakeCard();
+        }
+
+        // WIN GAME IF NO MORE CARDS IN LIBRARY
+        if (Library.LibraryCleared())
+        {
+            GameWin();
+            return;
+        }
+
+        // check if player has more than 4 cards
+        if (GroupHand.Cards.Count > MaxHandSize)
+        {
+            DiscardMessage.SetActive(true);
+            Discard.LockDropper(false);
+            return;
+        }
+        else 
+        {
+            DiscardMessage.SetActive(false);
+            Discard.LockDropper(true);
+        }
+
+        NewBattlefield();
+    }
+
+
+    protected virtual void NewBattlefield()
+    {
+        // draw first 4 cards
+        List<Card> battlefield = Library.Draw();
+        for (int i = 0; i < Battlefield.Length; i++)
+        {
+            Battlefield[i].SetCard(battlefield[i]);
+            CardVisuals.MoveCard(Library.transform as RectTransform, Battlefield[i].transform as RectTransform, Battlefield[i].SelectedCard);
+        }
+
+        // refresh INFO round count
+        Rounds.RefreshRounds(Library.Cards.Count);
+
+        // start reveal battlefield coroutine to check
+        StartCoroutine(WaitRevealBattlefield());
+    }
+
+
+    public void CheckGameOver() 
+    {
+        // check for Hand Empty
+        if (GroupHand.GetLastCard() != null || GroupAces.GetLastCard() != null)
+        {
+            return;
+        }
+
+        // check for enemies remeining
+        foreach (BattlefieldSlot slot in Battlefield)
+        {
+            if (!slot.IsEmpty && slot.IsEnemy)
+            {
+                GameLose();
+                return;
+            }
+        }
+    }
+    public void ButtonReplay() 
+    {
+        SceneManager.LoadScene("Game");
+    }
+
+    public virtual void GameWin() 
+    {
+        GroupAces.Lock(true);
+        GroupHand.Lock(true);
+
+        GameWinScreen.ShowScore(GroupAces.Cards.Concat(GroupHand.Cards).ToArray());
+
+        // save unlocked cards progress
+        GameSave.Instance.SaveProgress();
+    }
+    private void GameLose() 
+    {
+        GameLoseScreen.SetActive(true);
+
+        // save unlocked cards progress
+        GameSave.Instance.SaveProgress();
+    }
+
+
+    private IEnumerator WaitRevealBattlefield() 
+    {
+        while (CardVisuals.Queue.Count > 0)
+            yield return null;
+
+        yield return new WaitForSeconds(1);
+
+        RevealBattlefield();
+    }
+}
