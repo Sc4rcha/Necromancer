@@ -1,36 +1,20 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DropObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class DropObject : MonoBehaviour
 {
     public CardObjectMove Card { get; private set; }
 
-    private bool isLocked;
+    public bool IsLocked;
 
     public virtual void DropCard(CardObjectMove card)
     {
         Card = card;
     }
 
-
     public void Lock (bool isLocked)
     {
-        this.isLocked = isLocked;
+        IsLocked = isLocked;
     }
-    
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (isLocked) return;
-
-        ManagerGameplay.Instance.CardMovement.DropperEnter(this);
-    }
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (isLocked) return;
-
-        ManagerGameplay.Instance.CardMovement.DropperExit(this);
-    }
-
 
 }

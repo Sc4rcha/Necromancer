@@ -1,7 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
-public class CardObjectMove : CardObject, IPointerEnterHandler, IPointerExitHandler
+public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
 {
     [Header ("Card Move")]
     public AudioSource SFXPickupDrop;
@@ -9,7 +12,6 @@ public class CardObjectMove : CardObject, IPointerEnterHandler, IPointerExitHand
     public AudioSource SFXHitZombie;
 
     public CardGroup CardGroup { private get; set; }
-
 
     private bool isLocked;
 
@@ -24,8 +26,11 @@ public class CardObjectMove : CardObject, IPointerEnterHandler, IPointerExitHand
     private Transform parentPrevious;
     private Vector2 positionPrevious;
 
-    private bool isPointerInside;
     private bool isPointerDown;
+
+    private GraphicRaycaster raycaster;
+    private PointerEventData pointerData;
+    private List<RaycastResult> results;
 
     private void Start()
     {
@@ -41,6 +46,10 @@ public class CardObjectMove : CardObject, IPointerEnterHandler, IPointerExitHand
         canvas = GetComponentInParent<Canvas>();
         canvasRect = canvas.transform as RectTransform;
         canvasGroup = GetComponent<CanvasGroup>();
+
+        raycaster = canvas.GetComponent<GraphicRaycaster>();
+        pointerData = new PointerEventData(EventSystem.current);
+
     }
     public override void SetCardInfo(GameInfo.Card cardReference)
     {
@@ -52,12 +61,6 @@ public class CardObjectMove : CardObject, IPointerEnterHandler, IPointerExitHand
 
     private void Update()
     {
-        // pickup and drop inputs
-        if (Input.GetMouseButtonDown(0) && isPointerInside)
-            PickUp();
-        if (Input.GetMouseButtonUp(0) && isPointerDown)
-            Drop();
-
         // drag movement
         if (isPointerDown)
         {
@@ -95,15 +98,39 @@ public class CardObjectMove : CardObject, IPointerEnterHandler, IPointerExitHand
         // play sfx
         SFXPickupDrop.Play();
 
+        pointerData.position = Input.mousePosition;
+        results = new List<RaycastResult>();
+        raycaster.Raycast(pointerData, results);
+
+        DropObject dropObj = null;
+        if (results.Count > 0)
+        {
+            foreach (RaycastResult obj in results)
+            {
+                if (obj.gameObject.transform.parent.GetComponent<DropObject>())
+                {
+                    dropObj = obj.gameObject.transform.parent.GetComponent<DropObject>();
+                    if (!dropObj.IsLocked)
+                        ManagerGameplay.Instance.CardMovement.DropperEnter(dropObj);
+
+                    break;
+                }
+            }
+        }
+
         // pointer variables
         isPointerDown = false;
         canvasGroup.blocksRaycasts = true;
 
         // send event to manager
-        ManagerGameplay.Instance.CardMovement.CardDrop(this);
+        ManagerGameplay.Instance.CardMovement.CardDrop();
 
         // shake card
         Shake.StartShake();
+
+        // drop clear
+        if (dropObj != null)
+            ManagerGameplay.Instance.CardMovement.DropperExit(dropObj);
     }
 
 
@@ -132,19 +159,22 @@ public class CardObjectMove : CardObject, IPointerEnterHandler, IPointerExitHand
             SFXHitSpell.Play();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
         if (isLocked)
             return;
 
-        isPointerInside = true;
+        PickUp();
+        isPointerDown = true;
     }
-    public void OnPointerExit(PointerEventData eventData)
+
+    void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
         if (isLocked)
             return;
 
-        isPointerInside = false;
+        if (isPointerDown)
+            Drop();
     }
 }
 

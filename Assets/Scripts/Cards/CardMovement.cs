@@ -16,8 +16,12 @@ public class CardMovement : MonoBehaviour
 
         CardPickedUp.transform.SetParent(CanvasTop);
     }
-    public void CardDrop(CardObjectMove card)
+    public void CardDrop()
     {
+        // do nothing if no card picked up
+        if (CardPickedUp == null)
+            return;
+
         // Card hovering over empty dropper
         if (DropperHovering != null)
         {
@@ -25,7 +29,7 @@ public class CardMovement : MonoBehaviour
             CardPickedUp.DropDropper(DropperHovering);
 
             // hovering dropper card add
-            DropperHovering.DropCard(card);
+            DropperHovering.DropCard(CardPickedUp);
         }
         // Card hovering over nothing
         else

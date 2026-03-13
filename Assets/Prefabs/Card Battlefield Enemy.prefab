@@ -4960,6 +4960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e955a915fb708e648adf2e315810adf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsLocked: 0
 --- !u!1 &4719716614371906562
 GameObject:
   m_ObjectHideFlags: 0
@@ -10012,7 +10013,7 @@ GameObject:
   - component: {fileID: 5758545790800045124}
   - component: {fileID: 5635656113894508176}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image dropper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
