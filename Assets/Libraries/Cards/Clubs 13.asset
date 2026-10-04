@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
   m_Name: Clubs 13
   m_EditorClassIdentifier: 
+  Id: f09079185778479fa3f249a925b18a05
   CardSuit: 2
   CardValue: 13
   CardSprite: {fileID: 21300000, guid: 4d8d1c844ab74e242b8be1d8ce847253, type: 3}

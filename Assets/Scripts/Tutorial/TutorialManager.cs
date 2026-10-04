@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
-using static GameInfo;
 
 public class TutorialManager : ManagerGameplay
 {
@@ -14,7 +12,7 @@ public class TutorialManager : ManagerGameplay
     private void Start()
     {
         // Skip if tutorial already complete
-        if (GameSave.Instance.TutorialComplete == 1)
+        if (GameManager.Instance.SaveData.TutorialComplete)
         {
             TutorialEnd();
             return;
@@ -74,7 +72,8 @@ public class TutorialManager : ManagerGameplay
     public override void GameWin()
     {
         // save tutorial complete
-        GameSave.Instance.SaveTutorialComplete();
+        GameManager.Instance.SaveData.TutorialComplete = true;
+        GameManager.Instance.Save();
 
         TutorialGroups[3].Show();
         GroupAces.gameObject.SetActive(true);
@@ -82,6 +81,6 @@ public class TutorialManager : ManagerGameplay
 
     public void TutorialEnd() 
     {
-        ButtonReplay();
+        GameManager.Instance.GameStart();
     }
 }

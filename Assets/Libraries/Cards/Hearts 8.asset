@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
   m_Name: Hearts 8
   m_EditorClassIdentifier: 
+  Id: 218604c9402c45c79115346e0ac6bd38
   CardSuit: 0
   CardValue: 8
   CardSprite: {fileID: 21300000, guid: bfb27ecee7b94404e8f6bd287b1c0ffc, type: 3}

@@ -2,13 +2,21 @@ using UnityEngine;
 
 public class CardMovement : MonoBehaviour
 {
+    public static CardMovement Instance;
+
     [Header("Scene References")]
     public Transform CanvasTop;
-
 
     public CardObjectMove CardPickedUp { get; private set; }
     public DropObject DropperHovering { get; private set; }
 
+    private void Start()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     public void CardPickup(CardObjectMove card)
     {

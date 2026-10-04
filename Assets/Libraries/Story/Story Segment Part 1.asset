@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1cba0ac09a60a4ebf262d84f8c3f7f, type: 3}
+  m_Name: Story Segment Part 1
+  m_EditorClassIdentifier: Assembly-CSharp::SoStorySegment
+  Title: Part 1
+  CorrectOrder:
+  - {fileID: 11400000, guid: 942e69872462acb42b54258ce1d488d7, type: 2}
+  - {fileID: 11400000, guid: 699582a560cfd9a4384f0f660121f69d, type: 2}
+  - {fileID: 11400000, guid: 8148f22161aa8664baafa233c7f1986d, type: 2}
+  - {fileID: 11400000, guid: 895eef174d6eea54182e899abcdd9015, type: 2}
+  - {fileID: 11400000, guid: 461e84544e9249a41a66da0c3371d206, type: 2}
+  - {fileID: 11400000, guid: 4fa876651fc981d4ea976e07fcd6c63b, type: 2}

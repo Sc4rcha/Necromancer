@@ -23,5 +23,6 @@ public class DropObjectDiscard : DropObject
 
         // check game over
         ManagerGameplay.Instance.CheckGameOver();
+        ManagerGameplay.Instance.AddCardToScore(card.CardReference);
     }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
   m_Name: Spades 11
   m_EditorClassIdentifier: 
+  Id: 64edb051e3aa4aada35b43ed95f30c90
   CardSuit: 3
   CardValue: 11
   CardSprite: {fileID: 21300000, guid: b5027424ec24568449385772e75e01e1, type: 3}

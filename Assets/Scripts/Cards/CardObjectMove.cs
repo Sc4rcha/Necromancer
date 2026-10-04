@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
 {
@@ -70,7 +69,7 @@ public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
     }
 
 
-    private void PickUp() 
+    protected virtual void PickUp() 
     {
         // play sfx
         SFXPickupDrop.Play();
@@ -84,7 +83,7 @@ public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
         positionPrevious = transform.position;
 
         // send event to manager
-        ManagerGameplay.Instance.CardMovement.CardPickup(this);
+        CardMovement.Instance.CardPickup(this);
 
         // set mouse offset
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, canvas.worldCamera, out mouseOffset);
@@ -93,7 +92,7 @@ public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
         // shake card
         Shake.StartShake();
     }
-    private void Drop()
+    protected virtual void Drop()
     {
         // play sfx
         SFXPickupDrop.Play();
@@ -111,7 +110,7 @@ public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
                 {
                     dropObj = obj.gameObject.transform.parent.GetComponent<DropObject>();
                     if (!dropObj.IsLocked)
-                        ManagerGameplay.Instance.CardMovement.DropperEnter(dropObj);
+                        CardMovement.Instance.DropperEnter(dropObj);
 
                     break;
                 }
@@ -123,14 +122,14 @@ public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
         canvasGroup.blocksRaycasts = true;
 
         // send event to manager
-        ManagerGameplay.Instance.CardMovement.CardDrop();
+        CardMovement.Instance.CardDrop();
 
         // shake card
         Shake.StartShake();
 
         // drop clear
         if (dropObj != null)
-            ManagerGameplay.Instance.CardMovement.DropperExit(dropObj);
+            CardMovement.Instance.DropperExit(dropObj);
     }
 
 
@@ -145,8 +144,11 @@ public class CardObjectMove : CardObject, IPointerDownHandler, IPointerUpHandler
     }
     public void DropDropper(DropObject dropper)
     {
-        CardGroup.CardRemove(this);
-        CardGroup = null;
+        if (CardGroup != null)
+        {
+            CardGroup.CardRemove(this);
+            CardGroup = null;
+        }
 
         transform.position = dropper.transform.position;
     }

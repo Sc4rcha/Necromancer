@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
   m_Name: Hearts 3
   m_EditorClassIdentifier: 
+  Id: 623a9530020d4d6bb88881eb9eed0cc8
   CardSuit: 0
   CardValue: 3
   CardSprite: {fileID: 21300000, guid: 0fa31bfaf71696144baf8753dce2a16a, type: 3}

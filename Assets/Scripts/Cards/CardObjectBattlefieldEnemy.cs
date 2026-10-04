@@ -12,6 +12,8 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
     public ParticleSystem ReviveParticlesBurst;
     public AudioSource SFXHitRevive;
     public AudioSource SFXDead;
+    [Space]
+    public FXCardCapture FXCapture;
 
     private List<CardObject> attacks;
     private int attacksTotalValue;
@@ -32,6 +34,15 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
         Dropper.Lock(true);
 
         waitForDeadCardShake = new WaitForSeconds(0.3f);
+    }
+
+    public override void ShowHide(bool isShow)
+    {
+        base.ShowHide(isShow);
+
+        // hide capture effect
+        if (!isShow)
+            FXCapture.Hide();
     }
 
     public override void Activate()
@@ -68,6 +79,9 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
             // replace card drop SFX for hit revive
             SFXHitRevive.Play();
             card.SFXPickupDrop.Stop();
+
+            // do capture effect
+            FXCapture.Show();
         }
 
         // kill if attack values is over card value
@@ -94,7 +108,6 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
         }
     }
 
-
     private void Kill() 
     {
         // check revive and revive, otherwise discard
@@ -106,7 +119,7 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
             ManagerGameplay.Instance.CardVisuals.MoveCardPickup(GetComponent<RectTransform>(), ManagerGameplay.Instance.GroupHand);
 
             // save progress
-            GameSave.Instance.CardAddProgress(CardReference);
+            GameManager.Instance.CardUnlock(CardReference);
         }
         else
             ManagerGameplay.Instance.Discard.DiscardCard(this);
