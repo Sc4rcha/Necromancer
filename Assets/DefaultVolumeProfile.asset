@@ -204,13 +204,13 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0
   response:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -406,6 +406,31 @@ MonoBehaviour:
   bladeRotation:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &-2637342631928704288
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf4c04663e78864b8f5c69dee3e635f, type: 3}
+  m_Name: DitherPostprocessing
+  m_EditorClassIdentifier: Assembly-CSharp::DitherPostprocessing
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  ditherSize:
+    m_OverrideState: 1
+    m_Value: 1
+  colorLevels:
+    m_OverrideState: 1
+    m_Value: 2
+  monochrome:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-1083910812058648046
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -509,6 +534,7 @@ MonoBehaviour:
   - {fileID: -8186968272690591729}
   - {fileID: -3978695733392391637}
   - {fileID: -1083910812058648046}
+  - {fileID: -2637342631928704288}
 --- !u!114 &156332030701414761
 MonoBehaviour:
   m_ObjectHideFlags: 3

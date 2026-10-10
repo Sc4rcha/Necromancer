@@ -16,21 +16,33 @@ public class CollectionManager : MonoBehaviour
     public void ButtonSelectHearts() 
     {
         foreach(var collection in Collections)
-            collection.Show(collection.Suit == GameInfo.SUIT.Hearts);
+        {
+            if (collection.Suit == GameInfo.SUIT.Hearts)
+                collection.Show(true);
+        }
     }
     public void ButtonSelectDiamonds()
     {
         foreach (var collection in Collections)
-            collection.Show(collection.Suit == GameInfo.SUIT.Diamonds);
+        {
+            if (collection.Suit == GameInfo.SUIT.Diamonds)
+                collection.Show(true);
+        }
     }
     public virtual void ButtonSelectSpades()
     {
         foreach (var collection in Collections)
-            collection.Show(collection.Suit == GameInfo.SUIT.Spades);
+        {
+            if (collection.Suit == GameInfo.SUIT.Spades)
+                collection.Show(true);
+        }
     }
     public virtual void ButtonSelectClubs()
     {
         foreach (var collection in Collections)
-            collection.Show(collection.Suit == GameInfo.SUIT.Clubs);
+        {
+            if (collection.Suit == GameInfo.SUIT.Clubs)
+                collection.Show(true);
+        }
     }
 }

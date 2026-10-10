@@ -26,7 +26,14 @@ public class DropObjectStory : DropObject
 
     public override void DropCard(CardObjectMove card)
     {
-        foreach(var dropObj in story.Droppers)
+        // card is own card
+        if (card == CardReference)
+        {
+            SelectCard(card.CardReference);
+            return;
+        }
+
+        foreach (var dropObj in story.Droppers)
         {
             // if drop object is self skip
             if (dropObj == this) continue;

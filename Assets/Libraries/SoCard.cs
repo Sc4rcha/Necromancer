@@ -11,6 +11,7 @@ public class SoCard : ScriptableObject
     public Sprite CardSpriteHand;
     public Sprite SuitSprite;
     [Space]
+    [TextArea(10,25)]
     public string CardStory;
 
     [ContextMenu("GenerateId")]

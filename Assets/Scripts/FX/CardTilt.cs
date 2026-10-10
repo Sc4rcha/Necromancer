@@ -38,4 +38,9 @@ public class CardTilt : MonoBehaviour
         // save position for next frame
         positionPrevious = transform.position;
     }
+
+    public void ForceTilt(Vector2 direction)
+    {
+        positionPrevious += direction;
+    }
 }

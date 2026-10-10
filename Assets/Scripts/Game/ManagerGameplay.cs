@@ -13,6 +13,7 @@ public class ManagerGameplay : MonoBehaviour
 
     [Header("Project References")]
     public SoCardList ReferenceLibrary;
+    public Sprite Background;
 
     [Header("Scene References")]
     public PileLibrary Library;
@@ -27,6 +28,7 @@ public class ManagerGameplay : MonoBehaviour
     public InfoRounds Rounds;
     [Space]
     public TMPro.TMP_Text TimeText;
+    public AudioSource TimeSFX;
     [Space]
     public GameWinScreen GameWinScreen;
     public GameObject GameLoseScreen;
@@ -34,6 +36,8 @@ public class ManagerGameplay : MonoBehaviour
     // score extra
     private bool gameOver;
     private float timeTotal;
+    private int secondLast;
+    private int secondCurrent;
     private List<Card> scoredCards;
 
     private void Awake()
@@ -44,7 +48,8 @@ public class ManagerGameplay : MonoBehaviour
     private void Start()
     {
         Setup();
-        StartGame();
+
+        StartCoroutine(WaitStart());
     }
 
     protected void Setup() 
@@ -63,6 +68,17 @@ public class ManagerGameplay : MonoBehaviour
 
         // setup card visuals
         CardVisuals.Setup();
+
+        // setup backgrond
+        GameManager.Instance.Post.BackgroundImage.sprite = Background;
+
+        // start counting time;
+        timeTotal = TimeMax;
+        secondLast = 0;
+        gameOver = false;
+
+        // achivement canon run setup
+        GameManager.Instance.Achivements.CanonRunStart();
     }
     protected void StartGame() 
     {
@@ -73,8 +89,6 @@ public class ManagerGameplay : MonoBehaviour
         NewBattlefield();
 
         // start counting time;
-        timeTotal = TimeMax;
-        gameOver = false;
         scoredCards = new List<Card>();
     }
 
@@ -84,7 +98,15 @@ public class ManagerGameplay : MonoBehaviour
 
         timeTotal -= Time.deltaTime;
         timeTotal = Mathf.Max (timeTotal, 0);
-        TimeText.text = timeTotal.ToString("000");
+        secondCurrent = Mathf.CeilToInt(timeTotal);
+
+        TimeText.text = secondCurrent.ToString("000");
+
+        if (secondCurrent != secondLast)
+        {
+            secondLast = secondCurrent;
+            TimeSFX.Play();
+        }
     }
 
     private void DrawInitial() 
@@ -164,9 +186,7 @@ public class ManagerGameplay : MonoBehaviour
     {
         // check for Hand Empty
         if (GroupHand.GetLastCard() != null || GroupAces.GetLastCard() != null)
-        {
             return;
-        }
 
         // check for enemies remeining
         foreach (BattlefieldSlot slot in Battlefield)
@@ -191,6 +211,7 @@ public class ManagerGameplay : MonoBehaviour
             AddCardToScore(card.CardReference);
 
         GameWinScreen.ShowScore(scoredCards.ToArray(), (int)timeTotal);
+
     }
     private void GameLose() 
     {
@@ -199,6 +220,12 @@ public class ManagerGameplay : MonoBehaviour
         GameLoseScreen.SetActive(true);
     }
 
+    private IEnumerator WaitStart() 
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        StartGame();
+    }
     private IEnumerator WaitRevealBattlefield() 
     {
         while (CardVisuals.Queue.Count > 0)

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CardObjectStory : CardObject
 {
+    public AudioSource SFXInteract;
+
     private StoryManager story;
 
     public override void Setup()
@@ -16,10 +18,13 @@ public class CardObjectStory : CardObject
         story.CardSelect(CardReference);
 
         Shake.StartShake();
+        SFXInteract.Play();
     }
 
     public override void SetCardInfo(GameInfo.Card cardReference)
     {
         base.SetCardInfo(cardReference);
+
+        Holder.GetComponent<CardTilt>().ForceTilt(Vector2.right);
     }
 }

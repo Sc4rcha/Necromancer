@@ -163,6 +163,9 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
                 return true;
         }
 
+        // achivement canon run fail
+        GameManager.Instance.Achivements.CanonRunFail();
+
         return false;
     }
 

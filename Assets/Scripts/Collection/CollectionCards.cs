@@ -11,7 +11,7 @@ public class CollectionCards : MonoBehaviour
     public CardObject CardSelected;
     public TMPro.TMP_Text CardText;
 
-    public void Setup() 
+    public void Setup()
     {
         for (int i = 0; i < Cards.Length; i++)
             Cards[i].Setup(this);
@@ -21,13 +21,18 @@ public class CollectionCards : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public virtual void Show(bool isShow) 
+    public virtual void Show(bool isShow)
     {
         gameObject.SetActive(isShow);
         Selected.SetActive(false);
 
         if (isShow)
+        {
             SetupCards();
+            GameManager.Instance.Post.ChangeMoveStrength(FXPost.MovementStrength.High);
+        }
+        else
+            GameManager.Instance.Post.ChangeMoveStrength(FXPost.MovementStrength.Low);
     }
 
     public void Select(GameInfo.Card card)

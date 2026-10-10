@@ -2,9 +2,11 @@ using UnityEngine;
 using System.Collections.Generic;
 using static GameInfo;
 using System.Linq;
+using UnityEngine.UI;
 
 public class PileLibrary : Pile
 {
+    [Header("Library")]
     private List<GameInfo.Card> drawnCards;
     private bool drawAllEnemies;
     private bool libraryAllEnemies;
@@ -60,7 +62,6 @@ public class PileLibrary : Pile
         // give card
         return drawnCards;
     }
-
 
     private bool AllEnemies(IEnumerable<Card> cards)
     {

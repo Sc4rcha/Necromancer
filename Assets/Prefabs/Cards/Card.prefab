@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2602125331943488184}
   - component: {fileID: 7882865623669008693}
+  - component: {fileID: 1546222079101822524}
   - component: {fileID: 4532926731670573319}
-  - component: {fileID: 5260794442315579840}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -47,6 +47,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946029550706683874}
   m_CullTransparentMesh: 1
+--- !u!114 &1546222079101822524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946029550706683874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8300efa53c1335b4fa7361d2a8ab6967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardBack
+  CardBacks:
+  - {fileID: -903108437965049523, guid: c6d35a52b13157d439b5db3b5469a586, type: 3}
+  - {fileID: 6834775769776820545, guid: 37d23e223015f6e4b9a561ccd4d6f288, type: 3}
+  - {fileID: -1275489700688986702, guid: 7299fc08690d52e48b4e3cbf839c1761, type: 3}
+  - {fileID: -6616602873026870867, guid: 80df54d834e53b84189fda1553ffa524, type: 3}
 --- !u!114 &4532926731670573319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,16 +76,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.91837364, b: 0.8326362, a: 1}
+  m_Material: {fileID: 2100000, guid: b1c3d5b1a22cb08438d020a3d5046214, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d5398a172fe8b949b722e32c21fce81, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -903108437965049523, guid: c6d35a52b13157d439b5db3b5469a586, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -77,19 +94,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5260794442315579840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946029550706683874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
-  m_ShowMaskGraphic: 1
 --- !u!1 &2148944765825936634
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,8 +125,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2602125331943488184}
   - {fileID: 6352337395712326064}
+  - {fileID: 2602125331943488184}
   m_Father: {fileID: 7061119575127714747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -319,8 +323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 4, y: 4}
+  m_AnchoredPosition: {x: 0, y: -2.5}
+  m_SizeDelta: {x: 30, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5064304286028890546
 CanvasRenderer:
@@ -337,13 +341,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5170594108510688301}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -417,11 +421,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: b1c3d5b1a22cb08438d020a3d5046214, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

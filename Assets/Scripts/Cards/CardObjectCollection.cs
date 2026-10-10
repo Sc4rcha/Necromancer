@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CardObjectCollection : CardObject
 {
+    public AudioSource SFXInteract;
+
     private CollectionCards collection;
 
     public void Setup (CollectionCards collection)
@@ -18,5 +20,8 @@ public class CardObjectCollection : CardObject
     public void ButtonInput() 
     {
         collection.Select(CardReference);
+
+        Shake.StartShake();
+        SFXInteract.Play();
     }
 }

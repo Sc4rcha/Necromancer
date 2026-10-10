@@ -1,33 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1233149941 &-6058389977614118019
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: DSGNMisc_HIT-Hit Rattle_HY_PC-004_{-6058389977614118019}
-  m_AudioClip: {fileID: 8300000, guid: 18e597c56656e6b458e6af32ba0effd6, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-2895393253970281216
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: DSGNMisc_HIT-Hit Rattle_HY_PC-003_{-2895393253970281216}
-  m_AudioClip: {fileID: 8300000, guid: de18fdaec53d3714ba60e3e153914537, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
 --- !u!1233149941 &-2879304867191564658
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DSGNMisc_HIT-Hit Rattle_HY_PC-002_{-2879304867191564658}
-  m_AudioClip: {fileID: 8300000, guid: 6972e86c00dcb5240832db4faed98c3f, type: 3}
+  m_Name: DSGNMisc_HIT-Fleeting Hit_HY_PC-006_{-2879304867191564658}
+  m_AudioClip: {fileID: 8300000, guid: b22e36b7426bfdd439a9ac99d304f287, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1233149941 &2047827146128404383
@@ -36,8 +16,8 @@ AudioContainerElement:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DSGNMisc_HIT-Hit Rattle_HY_PC-001_{2047827146128404383}
-  m_AudioClip: {fileID: 8300000, guid: 350c54920a0a48b41a77b84e62988912, type: 3}
+  m_Name: DSGNMisc_HIT-Fleeting Hit_HY_PC-003_{2047827146128404383}
+  m_AudioClip: {fileID: 8300000, guid: 232b39a612b0c9d44be1f36b1b3ed82b, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
@@ -47,25 +27,23 @@ AudioRandomContainer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Audio Random Container Dead
-  m_Volume: 0
+  m_Volume: -5
   m_Pitch: 0
   m_AutomaticTriggerTime: 0
   m_LoopCount: 1
-  m_VolumeRandomizationRange: {x: 0, y: 0}
-  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_VolumeRandomizationRange: {x: -3, y: 0}
+  m_PitchRandomizationRange: {x: -100, y: 100}
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
   - {fileID: 2047827146128404383}
   - {fileID: -2879304867191564658}
-  - {fileID: -2895393253970281216}
-  - {fileID: -6058389977614118019}
   m_AvoidRepeatingLast: 0
   m_PlaybackMode: 2
   m_TriggerMode: 1
   m_AutomaticTriggerMode: 1
   m_LoopMode: 1
-  m_VolumeRandomizationEnabled: 0
-  m_PitchRandomizationEnabled: 0
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
   m_AutomaticTriggerTimeRandomizationEnabled: 0
   m_LoopCountRandomizationEnabled: 0

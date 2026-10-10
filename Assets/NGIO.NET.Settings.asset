@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfacef98383b2409de958004c39328, type: 3}
+  m_Name: NGIO.NET.Settings
+  m_EditorClassIdentifier: NewgroundsIODotNet.Unity::NewgroundsIODotNet.Unity.NgioDotNetSettings
+  m_AppId: 62944:kDXcUHsm
+  m_EncryptionKey: njxeGGRQdqp0oC5Ub7cuFA==
+  m_AppVersion: 1.0.0
+  m_DebugMode: 0
+  m_PreloadMedals: 1
+  m_MedalSprites: {fileID: 11400000, guid: b96022707f79486429b86f0fb2f04f55, type: 2}
+  m_PreloadScores: 1
+  m_LogViewOnInit: 1

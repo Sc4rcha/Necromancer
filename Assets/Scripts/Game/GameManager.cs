@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     public SAVE.GameSave SaveData;
 
+    [Header("Achivements")]
+    public ManagerAchivements Achivements;
+
     [Header("Cards")]
     public SoCardList CardsReference;
     public SoStorySegment[] StorySegmentsReference;
@@ -15,8 +18,13 @@ public class GameManager : MonoBehaviour
     [Header ("Audio")]
     public AudioMixer Mixer;
     public float[] Volumes;
+    [Space]
+    public AudioSource SFXSource;
 
-    private int volumesIndex;
+    [Header("FX")]
+    public FXPost Post;
+
+    public int VolumesIndex { get; private set; }
 
     private void Awake()
     {
@@ -27,15 +35,17 @@ public class GameManager : MonoBehaviour
             Setup();
         }
         else
-            Destroy(this);
+            Destroy(gameObject);
     }
 
     private void Setup()
     {
         GetSave();
-        volumesIndex = 2;
+        VolumesIndex = 2;
 
-        Mixer.SetFloat("Master", Volumes[volumesIndex]);
+        Mixer.SetFloat("Master", Volumes[VolumesIndex]);
+
+        GameManager.Instance.Post.ChangeMoveStrength(FXPost.MovementStrength.Medium);
     }
 
     private void GetSave()
@@ -43,13 +53,16 @@ public class GameManager : MonoBehaviour
         if (SAVE.SaveManager.CheckSave())
             SaveData = SAVE.SaveManager.Load();
         else
-        {
-            SaveData = new SAVE.GameSave();
-            SaveData.SetupStorySegments(StorySegmentsReference);
-        }
+            NewSave();
     }
     public void Save()
     {
+        SAVE.SaveManager.Save(SaveData);
+    }
+    public void NewSave() 
+    {
+        SaveData = new SAVE.GameSave();
+        SaveData.SetupStorySegments(StorySegmentsReference);
         SAVE.SaveManager.Save(SaveData);
     }
 
@@ -57,16 +70,25 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
     public void AudioCycle() 
     {
-        volumesIndex = (volumesIndex + 1) % Volumes.Length;
-        Mixer.SetFloat("Master", Volumes[volumesIndex]);
+        VolumesIndex = (VolumesIndex + 1) % Volumes.Length;
+        Mixer.SetFloat("Master", Volumes[VolumesIndex]);
+    }
+    public void AudioSfxPlay(AudioResource resource) 
+    {
+        SFXSource.resource = resource;
+        SFXSource.Play();
     }
 
     public void CardUnlock(GameInfo.Card card) 
     {
         if (SaveData.CardsUnlocked.Contains(card.Id))
             return;
+
+        // check achivement card Unlock
+        Achivements.UnlockCardCheck(card);
 
         SaveData.CardsUnlocked.Add(card.Id);
     }

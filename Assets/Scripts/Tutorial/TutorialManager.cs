@@ -11,13 +11,6 @@ public class TutorialManager : ManagerGameplay
 
     private void Start()
     {
-        // Skip if tutorial already complete
-        if (GameManager.Instance.SaveData.TutorialComplete)
-        {
-            TutorialEnd();
-            return;
-        }
-
         Setup();
 
         // hide aces

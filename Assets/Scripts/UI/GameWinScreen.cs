@@ -12,7 +12,7 @@ public class GameWinScreen : MonoBehaviour
     private int scoreCurrent;
     private WaitForSeconds waitShowCard;
 
-    public void ShowScore(GameInfo.Card[] cards, int time) 
+    public void ShowScore(GameInfo.Card[] cards, int time)
     {
         // setup variables
         waitShowCard = new WaitForSeconds(0.3f);
@@ -23,9 +23,29 @@ public class GameWinScreen : MonoBehaviour
         // set score best
         ScoreBest.text = "Score Best : " + GameManager.Instance.SaveData.ScoreBest.ToString();
 
+        // check achivement BEAT FOR FIRST TIME
+        GameManager.Instance.Achivements.BeatFirstTime();
+
+        // check achivement Timer
+        GameManager.Instance.Achivements.BeatTimerCheck(time);
+
+        // check achivement Canon Run
+        GameManager.Instance.Achivements.CanonRunCheck();
+
         // save Score
         if (GameManager.Instance.SaveData.ScoreBest < GetFinalScore(cards) + time)
+        {
+            // update best score
             GameManager.Instance.SaveData.ScoreBest = GetFinalScore(cards) + time;
+
+#if NEWGROUNDS
+            // send High score
+            NewgroundsManager.Instance?.UploadHighScore(GameManager.Instance.SaveData.ScoreBest);
+#endif
+
+        }
+        // save game
+        GameManager.Instance.Save();
 
         // show win screen
         gameObject.SetActive(true);
@@ -36,6 +56,9 @@ public class GameWinScreen : MonoBehaviour
 
     private IEnumerator ShowScoreAnimation() 
     {
+        // initial animation delay
+        yield return new WaitForSeconds(1);
+
         // initial wait
         yield return waitShowCard;
         yield return waitShowCard;

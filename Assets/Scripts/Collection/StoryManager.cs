@@ -6,6 +6,8 @@ public class StoryManager : MonoBehaviour
 {
     public static StoryManager Instance;
 
+    [Header("References Project")]
+    public Sprite Background;
     [Header("References Scene")]
     public CollectionCardsStory CollectionCardsDefault;
     [Space]
@@ -18,6 +20,8 @@ public class StoryManager : MonoBehaviour
     [Header("Complete")]
     public GameObject CompleteHolderCards;
     public CardObjectStory[] CompleteCards;
+    public ParticleSystem CheckPassFX;
+    public AudioSource CheckPassVFX;
     [Space]
     public TMPro.TMP_Text StoryText;
 
@@ -50,6 +54,9 @@ public class StoryManager : MonoBehaviour
         // DEBUG UNLOCK ALL
         foreach (var card in GameManager.Instance.CardsReference.Cards)
             GameManager.Instance.CardUnlock(card.GetCard());
+
+        // set background
+        GameManager.Instance.Post.BackgroundImage.sprite = Background;
     }
 
     public void ButtonChangeSegment(int direction) 
@@ -69,15 +76,22 @@ public class StoryManager : MonoBehaviour
         {
             manager.SaveData.StorySegments[segmentIndex].IsComplete = true;
 
+            // effect
+            CheckPassFX.Play();
+            CheckPassVFX.Play();
+
             // save game
             GameManager.Instance.Save();
+
+            // check achivement section Check Pass
+            GameManager.Instance.Achivements.StorySegment(segmentIndex);
 
             RefreshSegment();
         }
     }
     public void ButtonExit() 
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MenuNewgrounds");
     }
 
     private void RefreshSegment() 

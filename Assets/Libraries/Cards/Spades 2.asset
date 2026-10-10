@@ -18,3 +18,12 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: c9e08760b61093b4588b3519b5c85146, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 54d19f10696f4084cbeb13585b6cd8d1, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: "Twain takes his tea with a nice dollop of honey. It calms hims, he
+    says.\r\n\r\nHe hasn\u2019t taken his earliest weeks in the Order well. Secunda
+    sits next to him in the mess hall every day at the exact same time, early evening.
+    She is surprisingly punctual, for someone who is always being chewed out for
+    lack of discipline. She\u2019s a Club, and the research division officers rarely
+    have patience for slackers.\r\n\r\nSecunda always seems to get away with it\r\n\r\nThey
+    drink tea together, but no sugar for her. Secunda hates sugar.\r\n\r\nThis, he
+    knows full well. She mentioned it when they were in basic, and it stuck in Twain\u2019s
+    brain. Like many other things about Secunda. It is easy to think about her. Comfortable. "

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu Newgrounds.unity
+    guid: 466c6fe3a8a93bb43ab3bf6f9947280b
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: bfcd9051113ecbf4b80aa5827db36200
   - enabled: 1
