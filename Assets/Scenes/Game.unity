@@ -660,8 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39df7581b479ec74390cc9e7b8ffb964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FXLightFlutter
-  IntensityMax: 0.5
-  IntensityMin: 0.3
+  IntensityMax: 0.75
+  IntensityMin: 0.5
   TimeToChange: 0.3
   TimerVariance: 0.2
 --- !u!114 &1781937699

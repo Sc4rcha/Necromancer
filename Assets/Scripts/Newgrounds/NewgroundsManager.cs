@@ -16,6 +16,7 @@ public class NewgroundsManager : MonoBehaviour
     public int IdStory3;
     public int IdStory4;
     public int IdStory5;
+    public int IdStory6;
     [Space]
     public int IdScore;
 

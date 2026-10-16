@@ -708,12 +708,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ae730eb4edcc30140983fc375a5a8bf7, type: 2}
   - {fileID: 11400000, guid: 82514deb086c3f14281e1612db22b1d0, type: 2}
   - {fileID: 11400000, guid: 8c2cb30afcb81f24d8641155d54dc80e, type: 2}
+  - {fileID: 11400000, guid: c3cd915e190140e4ea1b2843a59fad93, type: 2}
   - {fileID: 11400000, guid: 15db39ad0d7ed23479c9b33b467a49ca, type: 2}
   Mixer: {fileID: 24100000, guid: 6408ef0ab53e0cf459fa8b3637927f73, type: 2}
   Volumes:
   - -80
   - -6
-  - 0
+  - 1
   SFXSource: {fileID: 1138982113757225764}
   Post: {fileID: 4014645680003553931}
 --- !u!114 &2053683511242812108

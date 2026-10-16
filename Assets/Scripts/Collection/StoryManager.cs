@@ -51,10 +51,6 @@ public class StoryManager : MonoBehaviour
         // show first segment by default
         RefreshSegment();
 
-        // DEBUG UNLOCK ALL
-        foreach (var card in GameManager.Instance.CardsReference.Cards)
-            GameManager.Instance.CardUnlock(card.GetCard());
-
         // set background
         GameManager.Instance.Post.BackgroundImage.sprite = Background;
     }

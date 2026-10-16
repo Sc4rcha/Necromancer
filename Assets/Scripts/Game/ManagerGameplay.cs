@@ -210,7 +210,7 @@ public class ManagerGameplay : MonoBehaviour
         foreach (var card in GroupHand.Cards)
             AddCardToScore(card.CardReference);
 
-        GameWinScreen.ShowScore(scoredCards.ToArray(), (int)timeTotal);
+        GameWinScreen.ShowScore(scoredCards.ToArray(), Mathf.CeilToInt(timeTotal));
 
     }
     private void GameLose() 

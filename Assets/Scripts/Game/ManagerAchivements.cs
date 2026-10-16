@@ -115,9 +115,15 @@ public class ManagerAchivements : MonoBehaviour
 #endif
                 break;
             case 4:
-                // unlock Lore
+                // unlock Fin
 #if NEWGROUNDS
                 NewgroundsManager.Instance?.UnlockMedal(NewgroundsManager.Instance.IdStory5);
+#endif
+                break;
+            case 5:
+                // unlock Lore
+#if NEWGROUNDS
+                NewgroundsManager.Instance?.UnlockMedal(NewgroundsManager.Instance.IdStory6);
 #endif
                 break;
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameWinScreen : MonoBehaviour
 {
     public CardObjectScore[] Cards;
+    public CardTimeScore CardTimeScore;
     public TMPro.TMP_Text Score;
     public TMPro.TMP_Text ScoreBest;
 
@@ -82,6 +83,10 @@ public class GameWinScreen : MonoBehaviour
         // ADD TIME SCORE
         scoreCurrent += (int)time;
         Score.text = "Score : " + scoreCurrent;
+
+        CardTimeScore.gameObject.SetActive(true);
+        CardTimeScore.Setup();
+        CardTimeScore.SetScore(time);
 
         // final wait
         yield return waitShowCard;

@@ -816,7 +816,8 @@ MonoBehaviour:
   IdStory2: 93175
   IdStory3: 93176
   IdStory4: 93177
-  IdStory5: 93178
+  IdStory5: 93430
+  IdStory6: 93178
   IdScore: 16288
 --- !u!1 &1863413177
 GameObject:
