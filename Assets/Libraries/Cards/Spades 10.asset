@@ -18,3 +18,14 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: ba01abb30844b6b439b67c993e6ef82a, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 23046c3b058bf354a961b54cc8ebf8a6, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: "Little by little my tasks change.\r\n\r\nNo longer sent to copy texts.
+    Frustrating, but what can one do? Just listen and heed the words.\r\nSpades2
+    thinks he is relieved that they noticed. Something has shifted in the order,
+    not only duties. Communications are becoming more cryptic. Spades2 knows why
+    it is being done, but he also knows it will not last for long. The protocol is
+    falling apart. And that\u2019s\u2026 Good? Spades2 seems to believe so. Why?
+    \r\n\r\nNames and ranks, procedures and passwords. I\u2019m starting to forget.
+    The number of bolts in the western gate. The exact weight of every blade in the
+    armory. Which corridors flood when the generators fail. Which recruits have brothers,
+    or sisters, or no family at all.\r\n\r\nIf they don\u2019t see me, I can\u2019t
+    see him. Forget me, kill me, one and the same. No reason for it."

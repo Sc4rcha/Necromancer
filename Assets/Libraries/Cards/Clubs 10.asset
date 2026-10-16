@@ -18,3 +18,15 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: b811ff30a63cfea4e96651ba93cd816a, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: bcf307652aa9d484687ba7fa2afb849d, type: 3}
   SuitSprite: {fileID: 21300000, guid: a5fa7e067f97dc64f9305796721ed0ac, type: 3}
+  CardStory: "That makes sense, there is a hierarchy to it! Up and down it goes,
+    and Spades2 is at the bottom.. I copy the lines, and read as much as I can understand.
+    Recruits like Spades2 don\u2019t usually get access to this kind of text. It\u2019s
+    a good learning opportunity for Spades2. For me. He shivers, sitting alone on
+    the small desk he\u2019s been assigned while he works in the archives.\r\n\r\nSpades4,
+    his missing bunkmate, has returned. Has he had a bunkmate before? Spades2 remembers
+    him, but he knows he hasn\u2019t. Still, the young woman smiled when he made
+    her way into the barracks this morning. Ear to ear.\r\n\r\nThe new\u2026 Or old,
+    Spades2 supposes. The old bunkmate is different from what he remembers. Straight
+    posture, white teeth. Polite and friendly. But she eats with her left hand. Wasn\u2019t
+    she right-handed yesterday? Didn\u2019t he stand a bit shorter? Weren\u2019t
+    her eyes different?"

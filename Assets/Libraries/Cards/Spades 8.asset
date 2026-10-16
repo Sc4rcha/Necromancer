@@ -18,3 +18,16 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: fd03a7a1b315df84dacd4937e544a9a0, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 5218f0cb9ab40744fb0c7638bb1d40f3, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: "The following day is better, in many ways.\r\n\r\nSpades2 feels less
+    over the place, today. The distractions of the last few weeks seem dulled, somehow.
+    He isn\u2019t quite sure why this happened. Maybe a good night of rest? Could
+    be. He did sleep in, today. He didn\u2019t have time to check himself in the
+    mirror.\r\n\r\nHe feels more aware today, even seems to do better in training.
+    Recruits like him are full members of the order, unlike Trainees, but that doesn\u2019t
+    mean they can slack off. Spades2 spikes haven\u2019t even undergone the first
+    enjoining. He\u2019s getting left behind. I hate those spikes.\r\nEvery morning
+    it is some chow, training, then some menial duty for them to carry out. It changes
+    day to day, but always bores him. \r\n\r\nToday he is in recordkeeping. I pick
+    up the pen and read the lines I have to transcribe. Ah, text. That is much better.
+    The senior researchers don\u2019t have time for this, so it usually gets pushed
+    down to grunts like Spades2."

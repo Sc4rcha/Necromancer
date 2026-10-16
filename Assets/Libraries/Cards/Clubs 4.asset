@@ -18,4 +18,13 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: bff69377c1aba7c4da93cf639f6dec51, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 951eebe6e48c0a94c95340c5021e63d5, type: 3}
   SuitSprite: {fileID: 21300000, guid: a5fa7e067f97dc64f9305796721ed0ac, type: 3}
-  CardStory: 
+  CardStory: "All is as it should be. \r\n\r\nI understand all, now. No longer wide
+    eyes, which now I realise marked a lack of understanding. In a way, a reflection
+    of my own. I have eyes now. Dozens of pairs, not only glimpses seen in mirrors
+    and parchment.\r\n\r\nNames and ranks, procedures and passwords. Faces. I remember
+    them all. The number of bolts in the western gate. 18. The exact weight of every
+    blade in the armory. 74.623 kilograms. Which corridors flood when the generators
+    fail. But no longer, because they don\u2019t fail anymore. Which recruits have
+    brothers, or sisters, or no family at all. They do mention family, often. Why?\r\n\r\nNo
+    matter. Now that I understand, there is no need for \u2018I\u2019 or \u2018them\u2019.
+    Everything runs smoothly."

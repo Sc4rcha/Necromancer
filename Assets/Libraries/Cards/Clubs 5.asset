@@ -18,4 +18,16 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: 3da40725487b13e4bb9e380a2ea58d9d, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: bbf5ca0e64eef7a489e9c9f5404cf5ab, type: 3}
   SuitSprite: {fileID: 21300000, guid: a5fa7e067f97dc64f9305796721ed0ac, type: 3}
-  CardStory: 
+  CardStory: "Hm, that means I said something wrong. She asks what Spades2 is talking
+    about. That didn\u2019t happen, did it? The heating worked. Spades2 agrees. Ah,
+    you\u2019re right, of course. I must be misremembering. Spades2 blinks and frowns.
+    This winter is not as bad as the last one. But was the last one truly bad? Spades2
+    doesn\u2019t think so, and everyone else seems to have forgotten.\r\n\r\nStill,
+    the barracks are warm enough, unlike the outer walls. Most bunks are occupied,
+    which makes sense. Each soldier has a bunk. But there is an empty one next to
+    mine. Why is it empty? Bunks should have soldiers in them. I remember the soldier
+    who used to be there. \r\n\r\nThe bunk is there, but when Spades2 asks the others
+    about him, no one knows what I am talking about. Spades2 is told it was never
+    occupied. He thinks they are right, he knows there was never a soldier there.
+    Why did I think there was? Because there must have been. All bunks have a soldier.
+    I just can\u2019t remember what his face looked like.\r\n\r\nSpades2 sleeps."

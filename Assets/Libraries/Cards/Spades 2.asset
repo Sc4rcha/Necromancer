@@ -18,12 +18,14 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: c9e08760b61093b4588b3519b5c85146, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 54d19f10696f4084cbeb13585b6cd8d1, type: 3}
   SuitSprite: {fileID: 0}
-  CardStory: "Twain takes his tea with a nice dollop of honey. It calms hims, he
-    says.\r\n\r\nHe hasn\u2019t taken his earliest weeks in the Order well. Secunda
-    sits next to him in the mess hall every day at the exact same time, early evening.
-    She is surprisingly punctual, for someone who is always being chewed out for
-    lack of discipline. She\u2019s a Club, and the research division officers rarely
-    have patience for slackers.\r\n\r\nSecunda always seems to get away with it\r\n\r\nThey
-    drink tea together, but no sugar for her. Secunda hates sugar.\r\n\r\nThis, he
-    knows full well. She mentioned it when they were in basic, and it stuck in Twain\u2019s
-    brain. Like many other things about Secunda. It is easy to think about her. Comfortable. "
+  CardStory: "Spades2 takes a look at himself in the cheap mirror. His uniform is
+    within regulations. Black hair, black eyes with dark bags under them, the consequence
+    of one too many late nights on the training courts. \r\n\r\nMost of all, he feels
+    the weight of the spikes that adorn his shoulders, marking his division and rank.
+    Adorn\u2026 Is not the right word. These will soon be part of him, and will feed
+    on his marrow in exchange for power. Making him more.\r\n\r\nAnd he will need
+    to be more, if he is to keep up with the rest. For now, though, his bones and
+    humanity are intact.  \r\n\r\nSpades2 moves his hand up to adjust his lapel and
+    his reflection follows, after which he passes a thin comb through messy locks
+    and tames the worst of his bed hair.\r\n\r\nServiceable, for a first day. He
+    hopes it will be enough."

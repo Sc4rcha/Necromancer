@@ -18,3 +18,14 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: 75e2e45c0f8f9f44fb741d38bced2822, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 51db7038392df1f47b2854b807a81c52, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: "Spades2 comes in for debrief this morning, and he gets the feeling
+    that the Sergeant is off.\r\nMaybe the stress. She sits under the table, I think.
+    I see her eyes there. \r\n\r\nSpades2 feels like not everyone is genuine in their
+    reports, and lets her know. A lot of accusations towards superiors and rivals.
+    Getting competition out of the way. \r\n\r\nThe Sergeant thanks me for his report.
+    Spades2 sees her reflection on the polished wood.\r\n\r\nHave her eyes always
+    been this big?\r\n\r\nOf course, I think. Why wouldn\u2019t they? I\u2019ve heard
+    it say that she\u2019s got an eye for the battlefield. Spades2 shakes his head
+    and reel for a moment. Ah, that must be it, Spades2 thinks. An eye for the battlefield.
+    Right on. I must be getting forgetful again.\r\n\r\nCaptain Jack smiles.\r\n\r\nSpades2
+    smiles. I smile."

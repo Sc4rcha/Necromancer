@@ -18,4 +18,7 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: 64b27bd4418c2de47b44aa8ef3c7a56f, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 23a9cb1f550f1d4468fce77b2f80aa80, type: 3}
   SuitSprite: {fileID: 21300000, guid: a5fa7e067f97dc64f9305796721ed0ac, type: 3}
-  CardStory: 
+  CardStory: "The droning around, looking purposelessly around and checking for things
+    that are obvious. \r\n\r\nTo him at least. Not to whatever I-\r\n\r\nNO. No.
+    Don\u2019t think, just move, walk, step by step, embracing the spikes, brain
+    writhing against whatever gnaws at the edges of his consciousness. "

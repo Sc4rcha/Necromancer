@@ -18,3 +18,10 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: 59e684b8db8c65644be8abc310be27fa, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 282ee1fb047008d4088d159ef16fac41, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: "Someone knocks on the western gate, as I start to open my eyes and
+    do the things that must be done when there is light.\r\n\r\nSomeone knocks that
+    isn\u2019t me.\r\n\r\nHe. I do not understand him. Not all of him, not yet. I,
+    and I let him enter. I, and I and I take his word for what is going on in the
+    capital. \r\n\r\nThe man leaves after it becomes dark and light again. I do not
+    understand him. But he\u2019s seen me now. \r\n\r\nI have seen him and so I\u2019ve
+    seen I in him.\r\n\r\nSo much more to understand, wherever I\u2019m going."

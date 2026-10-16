@@ -18,3 +18,13 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: ccab38c8c4a385a489de6c1ab4fd818e, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: d5149f14727c9b44ba30f23917babed0, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: 'All is well.
+
+    
+
+    Nothing amiss.
+
+    
+
+    Smiles from ear
+    to ear on my faces.'

@@ -18,3 +18,14 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: 1d49e88135879754babda1a008b3532a, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: b53f85d39c07e574bb2a3a4cdbc4169d, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: "Something itches in the back of Spades2 head. He felt it today in the
+    mess hall, a vague sense of wrongness. Spades2 hesitates. Nothing was wrong,
+    was it? Yes, it was. People are supposed to blink. Spades2 blinks, of course.
+    \n\nHe has blinked today, multiple times. Long day, hasn\u2019t it been? I suppose
+    that\u2019s true. I should make sure. Spades2 asks Clubs2, who sits in front
+    of me, chewing while we chat. She blinks and opens her eyes wide at my question.
+    She laughs, I don\u2019t know her expression. \r\n\r\nSpades2 enjoys his talks
+    with Clubs2. She always knows what to say. She tells me about her day around
+    a mouthful of stew. I learn a lot from Clubs2. \r\n\r\nWhen they leave the mess
+    hall together, Spades2 remembers to blink. Blinking is important. Clubs2 stops
+    chewing, of course. Chewing is for when you\u2019re in the mess hall."

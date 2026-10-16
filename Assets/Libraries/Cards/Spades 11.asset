@@ -18,3 +18,11 @@ MonoBehaviour:
   CardSprite: {fileID: 21300000, guid: b5027424ec24568449385772e75e01e1, type: 3}
   CardSpriteHand: {fileID: 21300000, guid: 3e6b3647bcc3aad40aadbff1a4a59dca, type: 3}
   SuitSprite: {fileID: 0}
+  CardStory: "Close enough to grab the door handles and push them open, slamming
+    the creaking wood into the inner walls.\r\n\r\nCommander Jack observes from her
+    high seat, smiling pleasantly. She is not alone. Clubs2 and Spades 4 flank her,
+    the same bland smiles on their faces. There is a spark of worry in Clubs2\u2019s
+    \r\neyes, but it seems rehearsed. Learnt. Mimicked.\r\n\r\nTheir reflections
+    stare at me from the polished wood of the Commander\u2019s desk. \r\n\r\nClubs2
+    swallows. Why did he? Chewing and swallowing is for the mess hall.\r\n\r\nI give
+    my report."
