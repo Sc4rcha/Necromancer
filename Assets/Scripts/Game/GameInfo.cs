@@ -13,18 +13,16 @@ public class GameInfo
         public int Value;
         public Sprite Sprite;
         public Sprite SpriteHand;
-        public Sprite SuitSprite;
 
         public bool IsEnemy { get { return Suit == SUIT.Spades || Suit == SUIT.Clubs; } }
 
-        public Card(string id, SUIT suit, int value, Sprite sprite, Sprite spriteHand, Sprite suitSprite) 
+        public Card(string id, SUIT suit, int value, Sprite sprite, Sprite spriteHand) 
         {
             Id = id;
             Suit = suit;
             Value = value;
             Sprite = sprite;
             SpriteHand = spriteHand;
-            SuitSprite = suitSprite;
         }
 
     }
@@ -59,7 +57,7 @@ namespace SAVE
             TutorialComplete = false;
             ScoreBest = 0;
             CardsUnlocked = new List<string>();
-            StorySegments = new StorySegment[5];
+            StorySegments = new StorySegment[6];
         }
 
         public void SetupStorySegments(SoStorySegment[] reference) 
@@ -81,7 +79,7 @@ namespace SAVE
 
     public class  SaveManager
     {
-        public const string SAVE_KEY = "Save_0.1";
+        public const string SAVE_KEY = "Save_1.0";
 
         public static void Save(GameSave gameSave)
         {

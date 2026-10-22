@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Clubs 12
+  m_EditorClassIdentifier: 
+  Id: 00c07901bd404a7ba3d7a4d9a16e911d
+  CardSuit: 2
+  CardValue: 12
+  CardSprite: {fileID: 21300000, guid: 35e59c0be25390f439bb7e80a41397db, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: e851729f09b0fa54ab06460e00da74f5, type: 3}
+  Placement: 1
+  CardStory: "*Individuals wave weapons around, and chew, and close and open their
+    eyes and many other tasks at the appropriate locations, appropriate times. Tea
+    is drunk. Sometimes I cheat and keep them moving when they shouldn\u2019t. But
+    then they were afraid of not moving.*\r\n\r\n*Curious, to be afraid of stillness.
+    Afraid means the heart beats faster, chemicals pump, eyes dart around. It took
+    me a while to get that one right.*\r\n\r\n*I saw 2Spade doing it a lot, the last
+    few times before he opened his eyes and closed them before he and I were just
+    I.*\r\n\r\n*Time passes in perfection, and mistakes are fixed as time passes,
+    and mistakes are made because to err is to be human, so they don\u2019t break
+    perfection. They simply stitch it like a counterpoint.* "

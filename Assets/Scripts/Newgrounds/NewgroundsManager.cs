@@ -7,6 +7,7 @@ public class NewgroundsManager : MonoBehaviour
     public static NewgroundsManager Instance;
 
     public int IdWin;
+    public int IdLose;
     public int IdCanon;
     public int IdThinkFast;
     public int IdArmy;

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Spades 7
+  m_EditorClassIdentifier: 
+  Id: ae218ccdb4b3449d8b22e2b5a257b086
+  CardSuit: 3
+  CardValue: 7
+  CardSprite: {fileID: 21300000, guid: 44bd474505b229b4eae26504b62b8664, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: c97f8a06217b9d045875b265b30aee93, type: 3}
+  Placement: 1
+  CardStory: "2Spade stands at attention on the walls. 2Club is here, of course.
+    2Spade thinks she\u2019s been pulling on favors so that they get paired on guard
+    duty. Their divisions rarely share duties usually. Rations are passed around,
+    standard fare.\r\n\r\n2Spade takes a bite of the tough, stale bread. *No longer
+    in the mess hall. No chewing.* He tries and fails to swallow. *This is new.*
+    It becomes stuck halfway his esophagus, and he attempts to cough. *I follow the
+    spasms as muscle fibers twitch. Adrenaline floods my system as oxygen stops cold.*
+    Hands clawing, vision blackening. *A different process from the periodical loss
+    of conscience.*\r\n\r\nDread takes him, flailing, choking sobs. An undercurrent
+    of shame and horror at the absurdity of it all. Is this how it ends?"

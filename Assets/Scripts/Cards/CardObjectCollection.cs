@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardObjectCollection : CardObject
 {
     public AudioSource SFXInteract;
+    public Button CardButton;
 
     private CollectionCards collection;
 

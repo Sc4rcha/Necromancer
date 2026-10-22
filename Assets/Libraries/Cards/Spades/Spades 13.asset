@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Spades 13
+  m_EditorClassIdentifier: 
+  Id: 20dac646db0c490db3f19a9591e10a4e
+  CardSuit: 3
+  CardValue: 13
+  CardSprite: {fileID: 21300000, guid: d98d29d3b03d6c442a5e2c2962fbf446, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: 2ab583530cf7fea43a13174f470d15eb, type: 3}
+  Placement: 1
+  CardStory: "I was never devout. I believed, of course, because what else is there
+    to do? I saw one of Her holy wreaths, as a child, on the altars of the Great
+    Cathedral. I prayed, because what else is there to do?\r\n\r\nBut not like now.
+    Never like now. As I run barefoot through the hallways of this broken place,
+    being made sport of by men who cast away everything that made them civilised.
+    As I fall and scrape my knees to the sound of their mocking laughs. I pray, truly
+    pray for Her to save me. \r\n\r\nAnd she does.\r\n\r\nA single black thorn, emerging
+    from the ground, inches from my bloodied, sweaty face. I know the process. Every
+    child is taught, even if most never go through it. Slow, methodical, pressed
+    upon skin to carefully grow within the supplicant\u2019s body.\r\n\r\nI swallow
+    it whole."

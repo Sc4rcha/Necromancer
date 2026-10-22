@@ -22,7 +22,7 @@ public class GameWinScreen : MonoBehaviour
         scoreCurrent = 0;
 
         // set score best
-        ScoreBest.text = "Score Best : " + GameManager.Instance.SaveData.ScoreBest.ToString();
+        ScoreBest.text = "Best Score : " + GameManager.Instance.SaveData.ScoreBest.ToString();
 
         // check achivement BEAT FOR FIRST TIME
         GameManager.Instance.Achivements.BeatFirstTime();

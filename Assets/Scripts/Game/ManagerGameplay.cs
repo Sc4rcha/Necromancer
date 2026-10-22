@@ -212,12 +212,21 @@ public class ManagerGameplay : MonoBehaviour
 
         GameWinScreen.ShowScore(scoredCards.ToArray(), Mathf.CeilToInt(timeTotal));
 
+        if(FXHand.Instance != null)
+            FXHand.Instance.gameObject.SetActive(false);
+
     }
     private void GameLose() 
     {
         gameOver = true;
 
         GameLoseScreen.SetActive(true);
+
+        // check achivement LOSE FOR FIRST TIME
+        GameManager.Instance.Achivements.LoseFirstTime();
+
+        if (FXHand.Instance != null)
+            FXHand.Instance.gameObject.SetActive(false);
     }
 
     private IEnumerator WaitStart() 

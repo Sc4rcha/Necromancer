@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoStorySegment
   Title: Fin
   CorrectOrder:
-  - {fileID: 11400000, guid: 062311d758e22c741ba66a6022b6f4cb, type: 2}
-  - {fileID: 11400000, guid: 162e6aa60a7a3e240ace89d11bc032f3, type: 2}
-  - {fileID: 11400000, guid: b0e1a67d00c261349b66b081d177679b, type: 2}
-  - {fileID: 11400000, guid: 7161c79ae29e95f4c8d08a72126e04e8, type: 2}
-  - {fileID: 11400000, guid: 273e361032cf6ed459812892fbc24e7b, type: 2}
-  - {fileID: 11400000, guid: d99eef33d37b60d42b709a0ba3494bc5, type: 2}
+  - {fileID: 11400000, guid: 12ea7ebfee165eb46949db015c593f06, type: 2}
+  - {fileID: 11400000, guid: 667e99de69ef2a74f86b554e1ae7b6d2, type: 2}
+  - {fileID: 11400000, guid: f6542f62c3f2a74468fecf4575b5782f, type: 2}

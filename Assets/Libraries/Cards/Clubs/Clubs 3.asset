@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Clubs 3
+  m_EditorClassIdentifier: 
+  Id: 2f4e05c3808448bfad7aac8d6c7ad386
+  CardSuit: 2
+  CardValue: 3
+  CardSprite: {fileID: 21300000, guid: 5c3d8972b93a53e4aadb274a47ff664f, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: c74f450f70b2ce141b5068049ddb19f9, type: 3}
+  Placement: 0
+  CardStory: "The second execution comes without warning, but somehow 2Spade is not
+    surprised. 2Club carries a pocket mirror. *Not allowed. That rule was changed.*
+    The third one follows soon after. Then the fourth, and they don\u2019t stop.\r\n\r\nThe
+    whole complex is full of the scent of cooking oil repurposed for killing. He
+    has heard before that human flesh smells like cooked pork, but to experience
+    it first hand is sickening. *My stomach growls when the fire sears her and the
+    screams die down.* 2Spade retches, guts clenching at the sensation. *Don\u2019t
+    I like 2Club?*\r\n\r\n2Spade does. Did. She is no more. He must get out of here.
+    His days go on in a haze, and 2Spade can\u2019t tell where his own thoughts end
+    and the smoke begins. He is thankful, when night comes and sleep takes him."

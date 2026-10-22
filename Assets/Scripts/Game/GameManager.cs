@@ -87,9 +87,9 @@ public class GameManager : MonoBehaviour
         if (SaveData.CardsUnlocked.Contains(card.Id))
             return;
 
+        SaveData.CardsUnlocked.Add(card.Id);
+
         // check achivement card Unlock
         Achivements.UnlockCardCheck(card);
-
-        SaveData.CardsUnlocked.Add(card.Id);
     }
 }

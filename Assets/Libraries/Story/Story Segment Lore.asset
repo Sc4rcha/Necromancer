@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoStorySegment
   Title: Lore
   CorrectOrder:
-  - {fileID: 11400000, guid: ad515b8376422cb4ca9191613efa6046, type: 2}
-  - {fileID: 11400000, guid: f6542f62c3f2a74468fecf4575b5782f, type: 2}
+  - {fileID: 11400000, guid: 83b4f69ef747a4e4c86054835ccd9823, type: 2}
+  - {fileID: 11400000, guid: e20a60bdbca680d448d8df3d66969f44, type: 2}
   - {fileID: 11400000, guid: 7d82299989bfb5b46b8009678b473611, type: 2}
   - {fileID: 11400000, guid: 79d22e314eb70924ca902841a8512160, type: 2}

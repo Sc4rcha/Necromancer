@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Spades 10
+  m_EditorClassIdentifier: 
+  Id: 1f62b0e23cc54e42b48ec1269d2567d0
+  CardSuit: 3
+  CardValue: 10
+  CardSprite: {fileID: 21300000, guid: ba01abb30844b6b439b67c993e6ef82a, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: 23046c3b058bf354a961b54cc8ebf8a6, type: 3}
+  Placement: 1
+  CardStory: "Weeks pass and many more companions return. Did they ever leave? Of
+    course not. They weren't here yesterday. They\u2019ve never been here. *Yes they
+    have.*\r\n\r\nBut then there seems to be very little in their eyes at all. *I
+    think it\u2019s fine. Granted, 4Spade may not know much about herself, but she
+    knows much about the order. All of them do, now.* 2Spade supposes that\u2019s
+    what matters. *So do I. And their smiles are always ear to ear.* \r\n\r\n2Spade
+    doesn\u2019t like it, for some reason. He\u2019s not sure why. But he\u2019s
+    heard it say before. A smile from ear to ear. *So have I.*"

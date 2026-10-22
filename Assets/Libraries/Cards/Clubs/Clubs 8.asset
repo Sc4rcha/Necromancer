@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Clubs 8
+  m_EditorClassIdentifier: 
+  Id: b568f1f22b924edf8765fa3cc35f5095
+  CardSuit: 2
+  CardValue: 8
+  CardSprite: {fileID: 21300000, guid: dee6050c3f6105a4a84876f1dc654d2a, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: e6328afd1e53a6a4a821baa3ace9365e, type: 3}
+  Placement: 1
+  CardStory: "Some of the smiles dwindle when the burnings begin.\r\n\r\nIt\u2019s
+    just copied books, at first. 2Spade can\u2019t help but feel irritation at it.
+    Strange orders are one thing, but this is just asinine. Irritation turns to worry
+    when they start burning originals, though. Many of those tomes are worth more
+    than he can imagine.\r\n\r\n*Paper is derived from cellulose, which is processed
+    from wood. Wood is burned, sometimes stacked in deliberate patterns. It follows
+    that paper would too. I understand.* \r\n\r\nWorry becomes fear when the orders
+    extend to all written words, then any print. Holy scripture, personal correspondence,
+    pictures and paintings. It comes to a head when 8Club refuses to hand over a
+    family portrait. She is given death the same night, and her belongings destroyed.\r\n\r\n*Things
+    that aren\u2019t wood can burn too.*"

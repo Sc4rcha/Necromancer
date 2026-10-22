@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static GameInfo;
 
 public class ManagerAchivements : MonoBehaviour
 {
@@ -23,6 +24,13 @@ public class ManagerAchivements : MonoBehaviour
         }
     }
 
+    public void LoseFirstTime() 
+    {
+        // unlock lose First Time
+#if NEWGROUNDS
+        NewgroundsManager.Instance?.UnlockMedal(NewgroundsManager.Instance.IdLose);
+#endif
+    }
     public void BeatFirstTime()
     {
         // unlock beat First Time
@@ -47,21 +55,10 @@ public class ManagerAchivements : MonoBehaviour
         List<SoCard> suitCards = new List<SoCard>();
 
         // populate list of cards to check for
-        if (cardUnlocked.Suit == GameInfo.SUIT.Clubs)
+        foreach (var card in cardsReference.Cards)
         {
-            foreach(var card in cardsReference.Cards)
-            {
-                if (card.CardSuit == GameInfo.SUIT.Clubs)
-                    suitCards.Add(card);
-            }
-        }
-        else if (cardUnlocked.Suit == GameInfo.SUIT.Spades)
-        {
-            foreach (var card in cardsReference.Cards)
-            {
-                if (card.CardSuit == GameInfo.SUIT.Spades)
-                    suitCards.Add(card);
-            }
+            if (card.CardSuit == cardUnlocked.Suit)
+                suitCards.Add(card);
         }
 
         // check if a card is missing and stop if not unlocked

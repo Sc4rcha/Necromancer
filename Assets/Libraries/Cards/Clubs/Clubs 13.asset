@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Clubs 13
+  m_EditorClassIdentifier: 
+  Id: f09079185778479fa3f249a925b18a05
+  CardSuit: 2
+  CardValue: 13
+  CardSprite: {fileID: 21300000, guid: 4d8d1c844ab74e242b8be1d8ce847253, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: 222db09c1e216884981d68b9eb28514e, type: 3}
+  Placement: 0
+  CardStory: 'The first few hours were worse. The moment the thread was severed from
+    that holy spool, and enjoined with the stuff my soul is made of. What glorious
+    pain, to have scales ripped from my eyes and actually see for the first time
+    in my life.
+
+    
+
+    But pain is pain, no matter how honored. Sensation magnified
+    a thousandfold, insight sharpened so thin that I cut myself with every thought.
+    No, not cut. I am ripped apart from my own mind, each feeling and memory crystal
+    clear and all the more dangerous for it.
+
+    
+
+    I revel in it now. I can
+    feel down to the last infinitesimal part of it. How the blackened string creeps
+    across my skin and within it, burrowing and wiggling, an extension and a parasite
+    and a blessing. Through the devotion we ascend, and now I must prove mine.'

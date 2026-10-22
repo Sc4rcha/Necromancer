@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu Newgrounds.unity
     guid: 466c6fe3a8a93bb43ab3bf6f9947280b
   - enabled: 1

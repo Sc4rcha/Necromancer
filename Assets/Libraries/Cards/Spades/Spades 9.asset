@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Spades 9
+  m_EditorClassIdentifier: 
+  Id: e8b0afea66874b838d96ee201eedc306
+  CardSuit: 3
+  CardValue: 9
+  CardSprite: {fileID: 21300000, guid: 1cd5c302bf627294ba7370d3bf9ac769, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: 156de14cf9889c14c94271ab25d3e1ec, type: 3}
+  Placement: 2
+  CardStory: "I don\u2019t witness the incident, but 2Club tells me of it in the
+    mess hall. I haven\u2019t seen her as much lately, and I miss her. *I let her
+    know so that she is aware of it being a product of busyness, not lack of care.*\r\n\r\nWhy
+    did 2Spade phrase it like that? Still, she seems to understand. There is not
+    much joking around, even with her. Not anymore. *People eat mechanically, finish
+    their food and stand to leave back to their post. Duty is important.*\r\n\r\nMeals
+    at this post were never a cheerful affair, but there is tension in the air. She
+    is afraid too, as many others. *Five people have been chewing for a while without
+    taking a bite.* \r\n\r\nInsubordination is unthinkable. Now more than ever."

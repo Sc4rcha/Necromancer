@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Clubs 10
+  m_EditorClassIdentifier: 
+  Id: 85b448e8028d453c9132a32482bab455
+  CardSuit: 2
+  CardValue: 10
+  CardSprite: {fileID: 21300000, guid: b811ff30a63cfea4e96651ba93cd816a, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: bcf307652aa9d484687ba7fa2afb849d, type: 3}
+  Placement: 2
+  CardStory: "It doesn\u2019t help that there is much more to remember. \r\n\r\nAssignments
+    are rotated constantly, sometimes more than once a day. 2Spade can barely keep
+    up with it. Orders are given erratically, through different channels and at random
+    times. Twice, he is given details by four different officers. Sometimes he finds
+    himself doing copy work in the archives while someone from the research division
+    trains in the arms court. *Why? No matter.* \r\n\r\nEverything slows as the whole
+    company struggles to adapt. The pattern keeps changing. *I can make it out eventually.*"

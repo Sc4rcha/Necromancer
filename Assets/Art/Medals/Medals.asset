@@ -16,6 +16,8 @@ MonoBehaviour:
   MedalSpriteDefinitions:
   - MedalId: 93169
     MedalSprite: {fileID: 21300000, guid: cb8b61c9585bd004db18ab55fbfa953e, type: 3}
+  - MedalId: 93618
+    MedalSprite: {fileID: 21300000, guid: b0aa2f4d9b7550b49932494abcc7350a, type: 3}
   - MedalId: 93170
     MedalSprite: {fileID: 21300000, guid: a74ee096a3aa1ed45a5c53cc54d9bd31, type: 3}
   - MedalId: 93171
@@ -32,5 +34,7 @@ MonoBehaviour:
     MedalSprite: {fileID: 21300000, guid: 57111c8492988644e9ac796312182bc7, type: 3}
   - MedalId: 93177
     MedalSprite: {fileID: 21300000, guid: d9f6f839573a98f4a93f908d523029a1, type: 3}
+  - MedalId: 93430
+    MedalSprite: {fileID: 21300000, guid: 70723174a0b8e6049b727588bd86a10e, type: 3}
   - MedalId: 93178
     MedalSprite: {fileID: 21300000, guid: 93c2825aceb257c42a520b39a7f610de, type: 3}

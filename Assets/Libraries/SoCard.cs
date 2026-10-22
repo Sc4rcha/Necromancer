@@ -9,7 +9,8 @@ public class SoCard : ScriptableObject
     public int CardValue;
     public Sprite CardSprite;
     public Sprite CardSpriteHand;
-    public Sprite SuitSprite;
+    [Space]
+    public ChapterPlacement Placement;
     [Space]
     [TextArea(10,25)]
     public string CardStory;
@@ -21,6 +22,8 @@ public class SoCard : ScriptableObject
     }
     public GameInfo.Card GetCard() 
     {
-        return new GameInfo.Card(Id, CardSuit, CardValue, CardSprite, CardSpriteHand, SuitSprite);
+        return new GameInfo.Card(Id, CardSuit, CardValue, CardSprite, CardSpriteHand);
     }
+
+    public enum ChapterPlacement { Start, Middle, End }
 }

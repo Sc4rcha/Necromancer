@@ -1,18 +1,35 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class ManagerMenu : MonoBehaviour
 {
     public Sprite Background;
     [Space]
-    public Button ButtonPlay;
-    public Button ButtonStory;
+    public GameObject MenuDesktop;
+    public GameObject MenuMobile;
+    [Space]
+    public GameObject TutorialButton;
 
     private void Start()
     {
         GameManager.Instance.Post.ChangeMoveStrength(FXPost.MovementStrength.Low);
         GameManager.Instance.Post.BackgroundImage.sprite = Background;
+
+        if (Application.isMobilePlatform)
+        {
+            // Your phone-specific code here
+            MenuMobile.SetActive(true);
+        }
+        else
+        {
+            // Your desktop-specific code here
+            MenuDesktop.SetActive(true);
+        }
+#if UNITY_EDITOR
+        MenuDesktop.SetActive(true);
+#endif
+
+        TutorialButton.SetActive(GameManager.Instance.SaveData.TutorialComplete);
     }
 
     public void ButtonStart() 
@@ -39,5 +56,9 @@ public class ManagerMenu : MonoBehaviour
     public void ButtonMedal() 
     {
         GameManager.Instance.Achivements.BeatFirstTime();
+    }
+    public void ButtonTutorial() 
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 }

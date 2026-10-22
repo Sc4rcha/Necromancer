@@ -82,6 +82,10 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
 
             // do capture effect
             FXCapture.Show();
+
+            // hand visual
+            if (FXHand.Instance != null)
+                FXHand.Instance.HandCapture();
         }
 
         // kill if attack values is over card value
@@ -184,6 +188,16 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
 
                 // shake card
                 attacks[i].Shake.StartShake();
+
+                // hand visual
+                if (FXHand.Instance != null)
+                {
+                    if (attacks[i].CardReference.Suit == GameInfo.SUIT.Hearts || attacks[i].CardReference.Suit == GameInfo.SUIT.Diamonds)
+                        FXHand.Instance.HandAttackSpell();
+                    else
+                        FXHand.Instance.HandAttackZombie();
+                }
+
                 yield return waitForDeadCardShake;
             }
         }
@@ -192,6 +206,10 @@ public class CardObjectBattlefieldEnemy : CardObjectBattlefield
         SFXDead.Play();
 
         Shake.StartShake();
+
+        // hand visual
+        if (FXHand.Instance != null)
+            FXHand.Instance.HandKill();
 
         // final delay
         yield return waitForDeadCardShake;

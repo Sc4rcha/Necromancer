@@ -9,7 +9,14 @@ public class CollectionCards : MonoBehaviour
     [Header("Selected")]
     public GameObject Selected;
     public CardObject CardSelected;
-    public TMPro.TMP_Text CardText;
+    [Space]
+    public GameObject DividerTop;
+    public GameObject DividerBot;
+    public StoryText Text;
+
+
+    protected List<SoCard> suitCards = new List<SoCard>();
+    protected SAVE.GameSave save;
 
     public void Setup()
     {
@@ -40,13 +47,19 @@ public class CollectionCards : MonoBehaviour
         Selected.SetActive(true);
         CardSelected.SetCardInfo(card);
         CardSelected.CardImage.sprite = card.SpriteHand;
-        CardText.text = GameManager.Instance.CardsReference.GetCardById(card.Id).CardStory;
+
+        SoCard cardObject = GameManager.Instance.CardsReference.GetCardById(card.Id);
+
+        DividerTop.SetActive(cardObject.Placement == SoCard.ChapterPlacement.Start);
+        DividerBot.SetActive(cardObject.Placement == SoCard.ChapterPlacement.End);
+
+        Text.SetFormattedText (cardObject.CardStory);
     }
-    private void SetupCards() 
+    protected virtual void SetupCards() 
     {
         SoCardList cardsReference = GameManager.Instance.CardsReference;
-        List<SoCard> suitCards = new List<SoCard>();
-        SAVE.GameSave save = GameManager.Instance.SaveData;
+        suitCards = new List<SoCard>();
+        save = GameManager.Instance.SaveData;
 
         foreach (var card in cardsReference.Cards)
         {

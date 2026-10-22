@@ -20,10 +20,13 @@ public class StoryManager : MonoBehaviour
     [Header("Complete")]
     public GameObject CompleteHolderCards;
     public CardObjectStory[] CompleteCards;
-    public ParticleSystem CheckPassFX;
-    public AudioSource CheckPassVFX;
+    public ParticleSystem CheckPassVFX;
+    public AudioSource CheckPassSFX;
+    public AudioSource CheckFailSFX;
     [Space]
-    public TMPro.TMP_Text StoryText;
+    public GameObject DividerTop;
+    public GameObject DividerBot;
+    public StoryText Text;
 
     private int segmentIndex;
     private DropObjectStory selectedDropper;
@@ -65,6 +68,11 @@ public class StoryManager : MonoBehaviour
 
         // refresh story segment
         RefreshSegment();
+
+        // reset story text
+        DividerTop.SetActive(false);
+        DividerBot.SetActive(false);
+        Text.SetFormattedText ("");
     }
     public void ButtonCheckSegment() 
     {
@@ -73,8 +81,8 @@ public class StoryManager : MonoBehaviour
             manager.SaveData.StorySegments[segmentIndex].IsComplete = true;
 
             // effect
-            CheckPassFX.Play();
             CheckPassVFX.Play();
+            CheckPassSFX.Play();
 
             // save game
             GameManager.Instance.Save();
@@ -84,10 +92,19 @@ public class StoryManager : MonoBehaviour
 
             RefreshSegment();
         }
+        else
+        {
+            foreach (var dropper in Droppers)
+            {
+                dropper.CardReference.Shake.StartShake();
+            }
+
+            CheckFailSFX.Play();
+        }
     }
     public void ButtonExit() 
     {
-        SceneManager.LoadScene("MenuNewgrounds");
+        SceneManager.LoadScene("Menu");
     }
 
     private void RefreshSegment() 
@@ -105,7 +122,10 @@ public class StoryManager : MonoBehaviour
         if (!isComplete)
         {
             for (int i = 0; i < Droppers.Length; i++)
+            {
+                Droppers[i].SelectHint.SetActive(false);
                 Droppers[i].gameObject.SetActive(i < manager.StorySegmentsReference[segmentIndex].CorrectOrder.Length);
+            }
 
             // force rebuild horizontal layout group
             LayoutRebuilder.ForceRebuildLayoutImmediate(DropperGroup.GetComponent<RectTransform>());
@@ -133,7 +153,15 @@ public class StoryManager : MonoBehaviour
 
     public void CardSelect(GameInfo.Card card) 
     {
-        StoryText.text = manager.CardsReference.GetCardById(card.Id).CardStory;
+        foreach (var dropper in Droppers)
+            dropper.SelectHint.SetActive(dropper.CardInfo == card);
+
+        SoCard cardObject = manager.CardsReference.GetCardById(card.Id);
+
+        DividerTop.SetActive(cardObject.Placement == SoCard.ChapterPlacement.Start);
+        DividerBot.SetActive(cardObject.Placement == SoCard.ChapterPlacement.End);
+
+        Text.SetFormattedText(cardObject.CardStory);
     }
     public void CardSelectorOpen(DropObjectStory dropper) 
     {

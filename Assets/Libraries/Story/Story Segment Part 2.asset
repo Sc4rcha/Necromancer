@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoStorySegment
   Title: Part 2
   CorrectOrder:
-  - {fileID: 11400000, guid: 667e99de69ef2a74f86b554e1ae7b6d2, type: 2}
-  - {fileID: 11400000, guid: 83b4f69ef747a4e4c86054835ccd9823, type: 2}
-  - {fileID: 11400000, guid: e20a60bdbca680d448d8df3d66969f44, type: 2}
-  - {fileID: 11400000, guid: 02d3a93397ce48544b9d7a20b14a7af3, type: 2}
-  - {fileID: 11400000, guid: 16b77423433feb648bd39c2e67f9a60f, type: 2}
   - {fileID: 11400000, guid: bbe34d63ccf066c40971b52bb6c5a3b3, type: 2}
+  - {fileID: 11400000, guid: d99eef33d37b60d42b709a0ba3494bc5, type: 2}
+  - {fileID: 11400000, guid: 8148f22161aa8664baafa233c7f1986d, type: 2}
+  - {fileID: 11400000, guid: 273e361032cf6ed459812892fbc24e7b, type: 2}

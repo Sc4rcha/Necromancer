@@ -1,10 +1,9 @@
-using NUnit.Framework;
 using System.Collections;
 using UnityEngine;
 
 public class TutorialGroup : MonoBehaviour
 {
-    public GameObject[] Steps;
+    public TutorialStep[] Steps;
 
     private int stepCount;
     private WaitForSeconds waitShowTutorial;
@@ -18,8 +17,8 @@ public class TutorialGroup : MonoBehaviour
 
         // hide tutorials
         gameObject.SetActive(false);
-        foreach (var obj in Steps)
-            obj.SetActive(false);
+        foreach (var step in Steps)
+            step.Setup(this);
     }
 
     public void Show() 
@@ -40,14 +39,12 @@ public class TutorialGroup : MonoBehaviour
     {
         // hide tutorials
         gameObject.SetActive(false);
-        foreach (var obj in Steps)
-            obj.SetActive(false);
 
         // unlock player
         manager.GroupHand.Lock(false);
     }
 
-    public void ButtonNext() 
+    public void Next() 
     {
         // add step count
         stepCount++;
@@ -64,10 +61,10 @@ public class TutorialGroup : MonoBehaviour
     {
         // hide all tutorial steps
         foreach (var obj in Steps)
-            obj.SetActive(false);
+            obj.gameObject.SetActive(false);
 
         // show current tutorial step
-        Steps[stepCount].SetActive(true);
+        Steps[stepCount].gameObject.SetActive(true);
     }
 
 

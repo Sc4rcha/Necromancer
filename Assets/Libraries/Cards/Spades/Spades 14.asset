@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c43e919c9ca3648a979893a65cc945, type: 3}
+  m_Name: Spades 14
+  m_EditorClassIdentifier: 
+  Id: fe066bd049b24b89aa7b196a074bde13
+  CardSuit: 3
+  CardValue: 14
+  CardSprite: {fileID: 21300000, guid: 47a36e48ab7b4d84a935dfe95ba05bf2, type: 3}
+  CardSpriteHand: {fileID: 21300000, guid: 7648f67f8778ab14c95a1597b2307d70, type: 3}
+  Placement: 2
+  CardStory: 'And I am torn apart.
+
+    
+
+    I feel the briars grow within my
+    belly and upwards, crushing my lungs, infesting alveoli with a myriad thorns,
+    crushing my ribs and feeding greedily on my marrow. My body contorts, twists
+    in ways it was never meant to, but they keep it alive, keep me conscious through
+    all of it.
+
+    
+
+    The laughter has stopped. One of them is weeping. Gods,
+    I am **hungry.**
+
+    
+
+    My teeth sink deeply into his flesh, ripping him
+    apart. I barely hear the screams. I revel in the deep metallic taste, but I enjoy
+    most that they suffer instead of me. This is what She promised, a release from
+    fear and anguish in exchange for pain. My pain, theirs.
+
+    
+
+    What does
+    it matter? I will become a funeral wreath in Her honor, if it gets me my revenge. '

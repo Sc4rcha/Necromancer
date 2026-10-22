@@ -23,12 +23,20 @@ public class CardMovement : MonoBehaviour
         CardPickedUp = card;
 
         CardPickedUp.transform.SetParent(CanvasTop);
+
+        // hand visual
+        if (FXHand.Instance != null)
+            FXHand.Instance.PickupStart();
     }
     public void CardDrop()
     {
         // do nothing if no card picked up
         if (CardPickedUp == null)
             return;
+
+        // hand visual
+        if (FXHand.Instance != null)
+            FXHand.Instance.PickupEnd();
 
         // Card hovering over empty dropper
         if (DropperHovering != null)

@@ -808,6 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewgroundsMedals
   IdWin: 93169
+  IdLose: 93618
   IdCanon: 93170
   IdThinkFast: 93171
   IdArmy: 93172

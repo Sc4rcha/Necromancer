@@ -1,10 +1,15 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static GameInfo;
 
-public class DropObjectStory : DropObject
+public class DropObjectStory : DropObject, IPointerEnterHandler
 {
     public CardObjectMove CardReference;
     public Card CardInfo;
+    public GameObject SelectHint;
+    public GameObject CardChange;
+    public GameObject CardRemove;
+    public AudioSource HoverSFX;
 
     private int order;
     private StoryManager story;
@@ -16,6 +21,7 @@ public class DropObjectStory : DropObject
 
         CardReference.Setup();
         CardReference.ShowHide(false);
+        SelectHint.SetActive(false);
     }
 
     private void OnDisable()
@@ -65,6 +71,10 @@ public class DropObjectStory : DropObject
     {
         story.CardSelectorOpen(this);
     }
+    public void ButtonRemoveCard() 
+    {
+        DeselectCard();
+    }
 
     public void SelectCard(Card card) 
     {
@@ -82,6 +92,9 @@ public class DropObjectStory : DropObject
 
         story.SaveSelectedCard(card.Id, order);
         story.CardSelect(card);
+
+        CardChange.SetActive(false);
+        CardRemove.SetActive(true);
     }
     public void DeselectCard() 
     {
@@ -93,5 +106,18 @@ public class DropObjectStory : DropObject
         CardReference.ShowHide(false);
 
         story.SaveSelectedCard(null, order);
+
+        SelectHint.SetActive(false);
+        CardChange.SetActive(true);
+        CardRemove.SetActive(false);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (CardInfo != null && CardMovement.Instance.CardPickedUp == null && !SelectHint.activeInHierarchy)
+        {
+            story.CardSelect(CardInfo);
+            HoverSFX.Play();
+        }
     }
 }

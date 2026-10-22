@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: b1c3d5b1a22cb08438d020a3d5046214, type: 2}
   m_Color: {r: 0.11320752, g: 0.11260677, b: 0.10840154, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -260,7 +260,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1777981954356026715, guid: 6408ef0ab53e0cf459fa8b3637927f73, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 6418180475301049370, guid: 44a77f76ec40a8c44be2ff052c3e7591, type: 2}
+  m_Resource: {fileID: 6418180475301049370, guid: 6e8bb10e92b1fda4fa75f6e6e7e97395, type: 2}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -521,7 +521,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -584,6 +584,7 @@ MonoBehaviour:
   CardImage: {fileID: 1300976765042620744}
   Shake: {fileID: 1247284077495906267}
   SFXInteract: {fileID: 6508928125447607837}
+  CardButton: {fileID: 6938072459877100893}
 --- !u!224 &9135012253102740527 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7061119575127714747, guid: 39054dd780cd2f442a7fad7e54621e22, type: 3}
